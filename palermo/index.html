@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Μία Νύχτα στο Παλέρμο: κοινωνικό παιχνίδι ρόλων για 5-20 παίκτες. Μία συσκευή, μυστικοί ρόλοι, νύχτα, συζήτηση και ψηφοφορία." />
+    <title>Μία Νύχτα στο Παλέρμο</title>
+    <link rel="icon" href="../img/favicon.svg" />
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --bg-elev: #121827;
+            --text: #dbe4f3;
+            --muted: #7b859c;
+            --line: rgba(203, 213, 225, 0.1);
+            --crimson: #c0392b;
+            --crimson-strong: #d64535;
+            --teal: #2aa198;
+            --shadow: 0 14px 36px rgba(0, 0, 0, 0.42);
+            --radius-lg: 22px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Roboto", sans-serif;
+            background:
+                radial-gradient(circle at 50% -14%, rgba(192, 57, 43, 0.12), transparent 42%),
+                linear-gradient(180deg, #07080b 0%, #0a0c10 56%, #090b0f 100%);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman", Georgia, serif;
+            letter-spacing: 0.01em;
+            color: #f2f6ff;
+            line-height: 1.2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .sr-only {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+            white-space: nowrap;
+        }
+
+        .wrap {
+            width: min(1100px, calc(100% - 2.5rem));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            backdrop-filter: blur(14px);
+            background: rgba(10, 12, 16, 0.75);
+            border-bottom: 1px solid rgba(203, 213, 225, 0.05);
+        }
+
+        .site-header-inner {
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman", Georgia, serif;
+            font-size: 1rem;
+            color: #f8fafc;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 1.15rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .nav-links a {
+            transition: color 0.18s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: #eef4ff;
+        }
+
+        .hero {
+            position: relative;
+            min-height: calc(100vh - 68px);
+            min-height: calc(100svh - 68px);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(180deg, #020203 0%, #120507 62%, #0a0c10 100%);
+            border-bottom: 1px solid rgba(203, 213, 225, 0.06);
+        }
+
+        .hero-atmosphere {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        #hero-particles {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.28;
+        }
+
+        .fog {
+            position: absolute;
+            filter: blur(56px);
+            border-radius: 999px;
+            opacity: 0.2;
+            mix-blend-mode: screen;
+            animation: fogDrift 24s ease-in-out infinite alternate;
+        }
+
+        .fog.one {
+            width: 42vw;
+            height: 42vw;
+            left: -8vw;
+            top: 18%;
+            background: radial-gradient(circle, rgba(192, 57, 43, 0.35), transparent 65%);
+        }
+
+        .fog.two {
+            width: 48vw;
+            height: 48vw;
+            right: -12vw;
+            top: 10%;
+            background: radial-gradient(circle, rgba(165, 52, 40, 0.2), transparent 68%);
+            animation-delay: -5s;
+        }
+
+        .fog.three {
+            width: 60vw;
+            height: 60vw;
+            left: 15%;
+            bottom: -32vw;
+            background: radial-gradient(circle, rgba(108, 87, 86, 0.14), transparent 66%);
+            animation-delay: -9s;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: clamp(3.25rem, 9vw, 6.5rem) 0;
+            max-width: 760px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            margin-bottom: 0.95rem;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid rgba(192, 57, 43, 0.28);
+            border-radius: 999px;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: #f3b2ab;
+            background: rgba(192, 57, 43, 0.06);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.05rem, 7.8vw, 4.35rem);
+            text-wrap: balance;
+            margin-bottom: 0.85rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2.7vw, 1.42rem);
+            color: #d4deef;
+            margin-bottom: 1.8rem;
+            max-width: 34ch;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.45rem;
+        }
+
+        .store-btn {
+            min-height: 52px;
+            min-width: 220px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.82rem 1.15rem;
+            background: linear-gradient(145deg, rgba(23, 26, 33, 0.9), rgba(16, 19, 27, 0.9));
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .store-btn:hover,
+        .store-btn:focus-visible {
+            border-color: rgba(255, 255, 255, 0.22);
+            background: linear-gradient(145deg, rgba(25, 29, 37, 0.92), rgba(17, 20, 28, 0.92));
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.46);
+        }
+
+        .apple-mark {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .store-btn-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .store-btn-label {
+            font-size: 0.68rem;
+            color: #cbd5e1;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .store-btn-name {
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .hero-chips {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+        }
+
+        .hero-chips li {
+            border: 1px solid rgba(203, 213, 225, 0.14);
+            border-radius: 999px;
+            padding: 0.42rem 0.8rem;
+            color: #c3d0e4;
+            background: rgba(11, 14, 20, 0.54);
+            font-size: 0.86rem;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            padding: clamp(3.8rem, 7vw, 6.5rem) 0;
+        }
+
+        .section-intro {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.72rem, 5.1vw, 2.65rem);
+            margin-bottom: 0.7rem;
+        }
+
+        .section-copy {
+            color: #a8b5cc;
+            max-width: 62ch;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translate3d(0, 18px, 0);
+            transition: opacity 0.45s ease, transform 0.45s ease;
+            will-change: opacity, transform;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .screenshots-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .screenshots-intro {
+            margin-bottom: 0;
+        }
+
+        .carousel-shell {
+            position: relative;
+            width: min(620px, 100%);
+            margin: 0 auto;
+        }
+
+        .carousel {
+            position: relative;
+            outline: none;
+        }
+
+        .carousel-viewport {
+            border-radius: 14px;
+            overflow: hidden;
+            height: min(62vh, 540px);
+            min-height: 360px;
+            background: #05070c;
+            touch-action: pan-y;
+        }
+
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.32s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+            background: #06080f;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid rgba(203, 213, 225, 0.2);
+            background: rgba(7, 10, 17, 0.88);
+            color: #e2e8f0;
+            display: inline-grid;
+            place-items: center;
+            cursor: pointer;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .carousel-control:hover,
+        .carousel-control:focus-visible {
+            border-color: rgba(203, 213, 225, 0.38);
+            background: rgba(14, 20, 32, 0.95);
+        }
+
+        .carousel-control.prev {
+            left: -12px;
+        }
+
+        .carousel-control.next {
+            right: -12px;
+        }
+
+        .carousel-dots {
+            margin-top: 1.1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.55rem;
+        }
+
+        .carousel-dots button {
+            width: 11px;
+            height: 11px;
+            border-radius: 999px;
+            border: none;
+            background: rgba(148, 163, 184, 0.42);
+            cursor: pointer;
+            transition: transform 0.25s ease, background 0.25s ease;
+        }
+
+        .carousel-dots button[aria-current="true"] {
+            transform: scale(1.16);
+            background: var(--crimson);
+        }
+
+        .features-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .feature-card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: 1.12rem;
+            background: linear-gradient(165deg, rgba(17, 22, 33, 0.86), rgba(14, 18, 27, 0.88));
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: inline-grid;
+            place-items: center;
+            margin-bottom: 0.75rem;
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            background: rgba(192, 57, 43, 0.08);
+            color: #f7d2cd;
+            font-weight: 700;
+            font-size: 1.24rem;
+            line-height: 1;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #a6b4cc;
+        }
+
+        .steps {
+            list-style: none;
+            display: grid;
+            gap: 0.95rem;
+        }
+
+        .step {
+            position: relative;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: 1.08rem 1rem 1.05rem 1rem;
+            background: linear-gradient(160deg, rgba(14, 18, 27, 0.84), rgba(11, 15, 23, 0.88));
+        }
+
+        .step-index {
+            display: inline-grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            margin-bottom: 0.55rem;
+            font-weight: 700;
+            color: #f7e2df;
+            background: rgba(192, 57, 43, 0.16);
+            border: 1px solid rgba(192, 57, 43, 0.3);
+        }
+
+        .step h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .step p {
+            color: #a6b4cc;
+            font-size: 0.94rem;
+        }
+
+        .roles-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .role-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(203, 213, 225, 0.14);
+            padding: 1.15rem;
+            background: linear-gradient(155deg, rgba(16, 21, 33, 0.88), rgba(12, 16, 25, 0.9));
+            transition: border-color 0.24s ease, background 0.24s ease;
+        }
+
+        .role-card::before {
+            content: "";
+            position: absolute;
+            inset: -40% -20%;
+            background: radial-gradient(circle, rgba(var(--role-accent-rgb), 0.24) 0%, transparent 72%);
+            opacity: 0.75;
+            transform: translateY(10%);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .role-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(5, 7, 12, 0.02), rgba(5, 7, 12, 0.35) 66%, rgba(5, 7, 12, 0.62));
+            pointer-events: none;
+        }
+
+        .role-card h3,
+        .role-card p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .role-card h3 {
+            margin-bottom: 0.45rem;
+            font-size: 1.23rem;
+        }
+
+        .role-card p {
+            color: #c7d4ea;
+            opacity: 0.9;
+            transform: translateY(4px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .role-card:hover,
+        .role-card:focus-within {
+            border-color: rgba(var(--role-accent-rgb), 0.56);
+        }
+
+        .role-card:hover::before,
+        .role-card:focus-within::before {
+            opacity: 0.48;
+            transform: translateY(2%);
+        }
+
+        .role-card:hover p,
+        .role-card:focus-within p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .role-killer {
+            --role-accent: var(--crimson);
+            --role-accent-rgb: 192, 57, 43;
+        }
+
+        .role-town {
+            --role-accent: var(--teal);
+            --role-accent-rgb: 42, 161, 152;
+        }
+
+        .download {
+            position: relative;
+            border-top: 1px solid rgba(203, 213, 225, 0.06);
+            border-bottom: 1px solid rgba(203, 213, 225, 0.06);
+        }
+
+        .download-panel {
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(203, 213, 225, 0.12);
+            background:
+                radial-gradient(circle at 18% 12%, rgba(192, 57, 43, 0.14), transparent 55%),
+                linear-gradient(150deg, rgba(16, 21, 31, 0.9), rgba(12, 16, 25, 0.92));
+            padding: clamp(1.6rem, 4.4vw, 2.8rem);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .download-panel h2 {
+            font-size: clamp(1.65rem, 4.5vw, 2.5rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .download-panel p {
+            color: #c9d4e7;
+            margin: 0 auto 1.35rem auto;
+            max-width: 44ch;
+        }
+
+        .download .store-btn {
+            justify-content: center;
+            min-width: 240px;
+            border-color: rgba(255, 255, 255, 0.18);
+            background: linear-gradient(150deg, rgba(154, 56, 45, 0.14), rgba(14, 18, 27, 0.92));
+        }
+
+        .footer {
+            padding: 2.1rem 0 2.4rem;
+            color: #7f8ba0;
+            font-size: 0.92rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: inline-flex;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            color: #aebcd4;
+            transition: color 0.16s ease;
+        }
+
+        .footer-links a:hover,
+        .footer-links a:focus-visible {
+            color: #f3f7ff;
+        }
+
+        @keyframes fogDrift {
+            from {
+                transform: translate3d(-2%, -1%, 0) scale(1);
+            }
+            to {
+                transform: translate3d(2%, 1%, 0) scale(1.03);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .wrap {
+                width: min(1120px, calc(100% - 3.5rem));
+            }
+
+            .nav-links {
+                display: inline-flex;
+            }
+
+            .section-intro {
+                margin-bottom: 2.35rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1rem;
+            }
+
+            .roles-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .screenshots-layout {
+                flex-direction: row;
+                align-items: center;
+                gap: 2.2rem;
+            }
+
+            .screenshots-intro {
+                flex: 0 1 42%;
+                max-width: 460px;
+                margin-bottom: 0;
+            }
+
+            .carousel-shell {
+                flex: 1 1 58%;
+                margin: 0;
+                width: 100%;
+                max-width: 700px;
+            }
+
+            .carousel-viewport {
+                height: min(58vh, 540px);
+                min-height: 340px;
+            }
+
+            .slide img {
+                object-fit: contain;
+                object-position: center;
+                background: #05070c;
+            }
+
+            .footer-inner {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 1.1rem;
+            }
+
+            .steps {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 0.85rem;
+            }
+
+            .step::after {
+                content: "";
+                position: absolute;
+                top: 32px;
+                left: calc(100% + 7px);
+                width: 12px;
+                height: 1px;
+                background: rgba(203, 213, 225, 0.45);
+            }
+
+            .step:last-child::after {
+                display: none;
+            }
+
+            .roles-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .carousel-viewport {
+                height: 50vh;
+                min-height: 420px;
+                max-height: 620px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .carousel-control.prev {
+                left: -4px;
+            }
+
+            .carousel-control.next {
+                right: -4px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .fog,
+            #hero-particles,
+            .reveal,
+            .carousel-track,
+            .store-btn,
+            .role-card {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+    <noscript>
+        <style>
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        </style>
+    </noscript>
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="wrap site-header-inner">
+            <a class="brand" href="#top">Μία Νύχτα στο Παλέρμο</a>
+            <nav class="nav-links" aria-label="Πλοήγηση σε ενότητες">
+                <a href="#screenshots">Στιγμιότυπα</a>
+                <a href="#features">Χαρακτηριστικά</a>
+                <a href="#how-it-works">Πώς παίζεται</a>
+                <a href="#roles">Ρόλοι</a>
+                <a href="#download">Λήψη</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-atmosphere" aria-hidden="true">
+                <canvas id="hero-particles"></canvas>
+                <div class="fog one"></div>
+                <div class="fog two"></div>
+                <div class="fog three"></div>
+            </div>
+            <div class="wrap hero-content">
+                <span class="hero-label">Κοινωνικό παιχνίδι ρόλων</span>
+                <h1>Μία Νύχτα στο Παλέρμο</h1>
+                <p class="hero-subtitle">Η νύχτα πέφτει. Ποιος θα επιβιώσει;</p>
+                <div class="hero-actions">
+                    <a class="store-btn" href="https://apps.apple.com/app/id6759204428" target="_blank" rel="noopener noreferrer" aria-label="Coming soon">
+                        <span class="apple-mark" aria-hidden="true">&#63743;</span>
+                        <span class="store-btn-text">
+                            <span class="store-btn-name">Coming soon</span>
+                        </span>
+                    </a>
+                </div>
+                <ul class="hero-chips" aria-label="Βασικά χαρακτηριστικά">
+                    <li>5-20 παίκτες</li>
+                    <li>Μία συσκευή</li>
+                    <li>Offline</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="screenshots" class="reveal">
+            <div class="wrap">
+                <div class="screenshots-layout">
+                    <div class="section-intro screenshots-intro">
+                        <h2 class="section-title">Στιγμιότυπα Παιχνιδιού</h2>
+                        <p class="section-copy">Πέρασε τη συσκευή από παίκτη σε παίκτη, αποκάλυψε μυστικά ρόλους και οδήγησε την παρέα από τη νύχτα μέχρι την τελική κρίση.</p>
+                    </div>
+
+                    <div class="carousel-shell">
+                        <div class="carousel" data-carousel tabindex="0" aria-label="Καρουζέλ στιγμιοτύπων παιχνιδιού">
+                            <button class="carousel-control prev" type="button" data-carousel-prev aria-label="Προηγούμενο στιγμιότυπο">
+                                <span aria-hidden="true">&#10094;</span>
+                            </button>
+
+                            <div class="carousel-viewport" data-carousel-viewport>
+                                <div class="carousel-track" data-carousel-track>
+                                    <figure class="slide" data-caption="Ρύθμιση παικτών" aria-label="Ρύθμιση παικτών">
+                                        <img src="../images/screenshots/adding_players.png" alt="Οθόνη προσθήκης παικτών πριν ξεκινήσει το παιχνίδι" />
+                                    </figure>
+                                    <figure class="slide" data-caption="Αποκάλυψη ρόλου δολοφόνου" aria-label="Αποκάλυψη ρόλου δολοφόνου">
+                                        <img src="../images/screenshots/role_reveal_killer.png" alt="Μυστική αποκάλυψη του ρόλου δολοφόνου σε παίκτη" loading="lazy" />
+                                    </figure>
+                                    <figure class="slide" data-caption="Η νύχτα πέφτει" aria-label="Η νύχτα πέφτει">
+                                        <img src="../images/screenshots/nyxta_peftei_kleiste_matia.png" alt="Νυχτερινή φάση με αφήγηση και κλειστά μάτια" loading="lazy" />
+                                    </figure>
+                                    <figure class="slide" data-caption="Επιλογή στόχου δολοφόνων" aria-label="Επιλογή στόχου δολοφόνων">
+                                        <img src="../images/screenshots/stoxos_dolofonon.png" alt="Οι δολοφόνοι επιλέγουν τον στόχο τους κατά τη νύχτα" loading="lazy" />
+                                    </figure>
+                                    <figure class="slide" data-caption="Φάση ψηφοφορίας" aria-label="Φάση ψηφοφορίας">
+                                        <img src="../images/screenshots/voting.png" alt="Η φάση συζήτησης και ψηφοφορίας των παικτών" loading="lazy" />
+                                    </figure>
+                                    <figure class="slide" data-caption="Τελικό αποτέλεσμα" aria-label="Τελικό αποτέλεσμα">
+                                        <img src="../images/screenshots/game_end_niki_dolofonon.png" alt="Τελική οθόνη αποτελέσματος με νίκη δολοφόνων" loading="lazy" />
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control next" type="button" data-carousel-next aria-label="Επόμενο στιγμιότυπο">
+                                <span aria-hidden="true">&#10095;</span>
+                            </button>
+
+                            <div class="carousel-dots" aria-label="Επιλογή στιγμιοτύπου">
+                                <button type="button" data-carousel-dot data-index="0" aria-label="Μετάβαση στο στιγμιότυπο 1" aria-current="true"></button>
+                                <button type="button" data-carousel-dot data-index="1" aria-label="Μετάβαση στο στιγμιότυπο 2"></button>
+                                <button type="button" data-carousel-dot data-index="2" aria-label="Μετάβαση στο στιγμιότυπο 3"></button>
+                                <button type="button" data-carousel-dot data-index="3" aria-label="Μετάβαση στο στιγμιότυπο 4"></button>
+                                <button type="button" data-carousel-dot data-index="4" aria-label="Μετάβαση στο στιγμιότυπο 5"></button>
+                                <button type="button" data-carousel-dot data-index="5" aria-label="Μετάβαση στο στιγμιότυπο 6"></button>
+                            </div>
+                            <p class="sr-only" data-carousel-live aria-live="polite"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="reveal">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 class="section-title">Χαρακτηριστικά</h2>
+                    <p class="section-copy">Γρήγορο setup, δυνατή ατμόσφαιρα και ρόλοι που κρατούν την παρέα σε ένταση μέχρι το τέλος.</p>
+                </div>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#127917;</span>
+                        <h3>6 μοναδικοί ρόλοι</h3>
+                        <p>Δολοφόνοι, Ντετέκτιβ, Γιατρός, Πληροφοριοδότης και Πολίτες με διαφορετικές δυναμικές.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#128101;</span>
+                        <h3>5-20 παίκτες</h3>
+                        <p>Από μικρή παρέα μέχρι μεγάλο πάρτι, με ισορροπία και ένταση σε κάθε γύρο.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#128241;</span>
+                        <h3>Μία συσκευή αρκεί</h3>
+                        <p>Όλοι παίζουν στο ίδιο κινητό περνώντας το διακριτικά από χέρι σε χέρι.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#127760;</span>
+                        <h3>Ελληνικά και Αγγλικά</h3>
+                        <p>Πλήρης υποστήριξη και στις δύο γλώσσες για παρέες με διαφορετικό κοινό.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#128683;</span>
+                        <h3>Χωρίς internet</h3>
+                        <p>Παίζει παντού, οποτεδήποτε, χωρίς σύνδεση και χωρίς να απαιτείται λογαριασμός.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">&#127916;</span>
+                        <h3>Κινηματογραφική αφήγηση</h3>
+                        <p>Η νύχτα ξεδιπλώνεται με ατμοσφαιρικά μηνύματα και ρυθμό που χτίζει suspense.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="reveal">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 class="section-title">Πώς Παίζεται</h2>
+                    <p class="section-copy">Τέσσερα καθαρά βήματα. Η αγωνία ανεβαίνει όσο προχωρά η νύχτα.</p>
+                </div>
+
+                <ol class="steps">
+                    <li class="step">
+                        <span class="step-index">1</span>
+                        <h3>Πρόσθεσε παίκτες</h3>
+                        <p>Γράψε ονόματα και επίλεξε ρόλους σύμφωνα με το μέγεθος της παρέας.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-index">2</span>
+                        <h3>Μυστική αποκάλυψη ρόλων</h3>
+                        <p>Κάθε παίκτης βλέπει διακριτικά τον ρόλο του χωρίς να εκτεθεί στους άλλους.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-index">3</span>
+                        <h3>Η νύχτα πέφτει, οι δολοφόνοι χτυπούν</h3>
+                        <p>Οι ενέργειες της νύχτας εκτελούνται με σειρά και αλλάζουν τις ισορροπίες.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-index">4</span>
+                        <h3>Συζήτηση και ψηφοφορία</h3>
+                        <p>Η πόλη αποφασίζει ποιον θα αποβάλει πριν ξεκινήσει ο επόμενος γύρος.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="roles" class="reveal">
+            <div class="wrap">
+                <div class="section-intro">
+                    <h2 class="section-title">Ρόλοι</h2>
+                    <p class="section-copy">Κάθε ρόλος έχει διαφορετικό στόχο. Η στρατηγική αλλάζει σε κάθε τραπέζι.</p>
+                </div>
+
+                <div class="roles-grid">
+                    <article class="role-card role-killer" tabindex="0">
+                        <h3>Κρυφός Δολοφόνος</h3>
+                        <p>Εξοντώνει στόχους στη νύχτα και κρύβει την ταυτότητά του στη συζήτηση της ημέρας.</p>
+                    </article>
+                    <article class="role-card role-killer" tabindex="0">
+                        <h3>Φανερός Δολοφόνος</h3>
+                        <p>Γνωστός από την αρχή, αλλά παραμένει απειλή και αναγκάζει την πόλη να μοιράσει σωστά την ψήφο.</p>
+                    </article>
+                    <article class="role-card role-town" tabindex="0">
+                        <h3>Ντετέκτιβ</h3>
+                        <p>Συλλέγει κρίσιμες πληροφορίες τη νύχτα για να αποκαλύψει τους δολοφόνους την κατάλληλη στιγμή.</p>
+                    </article>
+                    <article class="role-card role-town" tabindex="0">
+                        <h3>Γιατρός</h3>
+                        <p>Προστατεύει παίκτες από επιθέσεις και κρατά την πόλη ζωντανή για έναν ακόμη γύρο.</p>
+                    </article>
+                    <article class="role-card role-town" tabindex="0">
+                        <h3>Πληροφοριοδότης</h3>
+                        <p>Αντλεί λεπτομέρειες που ενισχύουν τη λογική της ομάδας και γέρνουν την ψήφο.</p>
+                    </article>
+                    <article class="role-card role-town" tabindex="0">
+                        <h3>Πολίτης</h3>
+                        <p>Χωρίς ειδική δύναμη, αλλά με τη σωστή κρίση μπορεί να οδηγήσει την πόλη στη νίκη.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download reveal">
+            <div class="wrap">
+                <div class="download-panel">
+                    <h2>Μία συσκευή. Μία νύχτα. Ποιος θα επιβιώσει;</h2>
+                    <p>Οργάνωσε το επόμενο game night σου σε λίγα δευτερόλεπτα και μπες στο πιο σκοτεινό παιχνίδι ρόλων.</p>
+                    <a class="store-btn" href="https://apps.apple.com/app/id6759204428" target="_blank" rel="noopener noreferrer" aria-label="Coming soon">
+                        <span class="apple-mark" aria-hidden="true">&#63743;</span>
+                        <span class="store-btn-text">
+                            <span class="store-btn-name">Coming soon</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Artemis Codes</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Πολιτική Απορρήτου</a>
+                <a href="support.html">Υποστήριξη</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            const revealElements = document.querySelectorAll(".reveal");
+            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+                revealElements.forEach((el) => el.classList.add("is-visible"));
+            } else {
+                const observer = new IntersectionObserver(
+                    (entries, currentObserver) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+                            entry.target.classList.add("is-visible");
+                            currentObserver.unobserve(entry.target);
+                        });
+                    },
+                    { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+                );
+                revealElements.forEach((el) => observer.observe(el));
+            }
+
+            const carousel = document.querySelector("[data-carousel]");
+            if (carousel) {
+                const track = carousel.querySelector("[data-carousel-track]");
+                const viewport = carousel.querySelector("[data-carousel-viewport]");
+                const prevBtn = carousel.querySelector("[data-carousel-prev]");
+                const nextBtn = carousel.querySelector("[data-carousel-next]");
+                const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+                const slides = Array.from(track.children);
+                const liveRegion = carousel.querySelector("[data-carousel-live]");
+                let currentIndex = 0;
+                let touchStartX = 0;
+                let touchStartY = 0;
+
+                const setSlide = (index) => {
+                    currentIndex = (index + slides.length) % slides.length;
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                    slides.forEach((slide, slideIndex) => {
+                        const isActive = slideIndex === currentIndex;
+                        slide.setAttribute("aria-hidden", String(!isActive));
+                    });
+
+                    dots.forEach((dot, dotIndex) => {
+                        if (dotIndex === currentIndex) {
+                            dot.setAttribute("aria-current", "true");
+                        } else {
+                            dot.removeAttribute("aria-current");
+                        }
+                    });
+
+                    if (liveRegion) {
+                        const caption = slides[currentIndex].dataset.caption || "";
+                        liveRegion.textContent = `Στιγμιότυπο ${currentIndex + 1} από ${slides.length}: ${caption}`;
+                    }
+                };
+
+                prevBtn.addEventListener("click", () => setSlide(currentIndex - 1));
+                nextBtn.addEventListener("click", () => setSlide(currentIndex + 1));
+
+                dots.forEach((dot) => {
+                    dot.addEventListener("click", () => {
+                        const index = Number(dot.dataset.index);
+                        setSlide(index);
+                    });
+                });
+
+                carousel.addEventListener("keydown", (event) => {
+                    if (event.key === "ArrowLeft") {
+                        event.preventDefault();
+                        setSlide(currentIndex - 1);
+                    }
+                    if (event.key === "ArrowRight") {
+                        event.preventDefault();
+                        setSlide(currentIndex + 1);
+                    }
+                });
+
+                viewport.addEventListener(
+                    "touchstart",
+                    (event) => {
+                        if (event.touches.length !== 1) return;
+                        touchStartX = event.touches[0].clientX;
+                        touchStartY = event.touches[0].clientY;
+                    },
+                    { passive: true }
+                );
+
+                viewport.addEventListener(
+                    "touchend",
+                    (event) => {
+                        if (event.changedTouches.length !== 1) return;
+                        const deltaX = event.changedTouches[0].clientX - touchStartX;
+                        const deltaY = event.changedTouches[0].clientY - touchStartY;
+                        if (Math.abs(deltaX) < 45 || Math.abs(deltaY) > Math.abs(deltaX)) return;
+                        if (deltaX < 0) setSlide(currentIndex + 1);
+                        if (deltaX > 0) setSlide(currentIndex - 1);
+                    },
+                    { passive: true }
+                );
+
+                setSlide(0);
+            }
+
+            if (!prefersReducedMotion) {
+                const canvas = document.getElementById("hero-particles");
+                if (!canvas) return;
+                const context = canvas.getContext("2d");
+                if (!context) return;
+
+                let width = 0;
+                let height = 0;
+                let dpr = 1;
+                let frameId = null;
+                let particles = [];
+
+                const createParticle = () => {
+                    const isWide = window.innerWidth >= 768;
+                    return {
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.08,
+                        vy: isWide ? -(0.06 + Math.random() * 0.12) : -(0.04 + Math.random() * 0.08),
+                        size: 0.6 + Math.random() * 1.4,
+                        alpha: 0.08 + Math.random() * 0.22
+                    };
+                };
+
+                const resizeCanvas = () => {
+                    const rect = canvas.getBoundingClientRect();
+                    width = rect.width;
+                    height = rect.height;
+                    dpr = Math.min(2, window.devicePixelRatio || 1);
+                    canvas.width = Math.floor(width * dpr);
+                    canvas.height = Math.floor(height * dpr);
+                    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+                    const particleCount = window.innerWidth < 768 ? 8 : 16;
+                    particles = Array.from({ length: particleCount }, createParticle);
+                };
+
+                const render = () => {
+                    context.clearRect(0, 0, width, height);
+                    particles.forEach((particle) => {
+                        particle.x += particle.vx;
+                        particle.y += particle.vy;
+                        if (particle.y < -8 || particle.x < -8 || particle.x > width + 8) {
+                            particle.x = Math.random() * width;
+                            particle.y = height + Math.random() * 24;
+                            particle.vx = (Math.random() - 0.5) * 0.08;
+                            particle.alpha = 0.06 + Math.random() * 0.2;
+                        }
+                        context.beginPath();
+                        context.fillStyle = `rgba(226, 232, 240, ${particle.alpha})`;
+                        context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                        context.fill();
+                    });
+                    frameId = window.requestAnimationFrame(render);
+                };
+
+                resizeCanvas();
+                render();
+
+                window.addEventListener("resize", () => {
+                    window.cancelAnimationFrame(frameId);
+                    resizeCanvas();
+                    render();
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
