@@ -1,0 +1,48 @@
+# Artemis Leonardou
+
+> Full stack engineer and tech content creator based in Athens. Building products and teaching people to build with AI.
+
+Artemis Leonardou (known online as Artemis Codes, @artemisvibecodes) is a 19-year-old engineer and content creator. She is a Founding Engineer at KanoParty, an Informatics student at NKUA (Top 1%), and a tech content creator with 35k+ monthly views across TikTok and Instagram.
+
+## What she does
+
+- **Builds**: Full stack web applications, AI-integrated products, mobile apps (Python/Django, Next.js, React Native)
+- **Creates**: Short-form tech content on TikTok and Instagram (@artemisvibecodes) covering AI tools, vibe coding, and practical AI builder tutorials
+- **Teaches**: Prompting techniques, AI-assisted development workflows, rapid prototyping with AI builders
+
+## Creator profile
+
+- Platforms: TikTok and Instagram as @artemisvibecodes, YouTube as @artemiscodes
+- Audience: Tier-1 (US, EU, AU, CA) tech and builder audience
+- Monthly reach: 35k+ views
+- Content style: fast-paced, educational, practical — shows real builds with real prompts
+- Active UGC partner: Lovable (AI app builder)
+- Past brand experience: NOFire AI, Intel (Student Ambassador)
+
+## Developer profile
+
+- Current role: AI Product Developer / Founding Engineer at KanoParty (Jul 2025 - present)
+- Education: Informatics, NKUA (National & Kapodistrian University of Athens), Top 1%
+- Credentials: 10+ hackathons, several first-place finishes
+- Stack: Python, Django, Next.js, React Native, PostgreSQL, Tailwind, Supabase
+
+## Available for
+
+- UGC campaigns for AI tools, developer tools, SaaS products, and tech products
+- Sponsored content and brand integrations
+- Speaking at hackathons, tech events, and student conferences
+- Freelance full stack development
+
+## Contact
+
+Email: artemis@nofire.ai
+
+## Links
+
+- Website: https://artemiscodes.com
+- Dev portfolio: https://artemiscodes.com/portfolio
+- Instagram: https://www.instagram.com/artemisvibecodes/
+- TikTok: https://www.tiktok.com/@artemisvibecodes
+- YouTube: https://www.youtube.com/@artemiscodes
+- GitHub: https://github.com/artemisln
+- LinkedIn: https://www.linkedin.com/in/artemisln/
