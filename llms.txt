@@ -1,14 +1,15 @@
 # Artemis Leonardou
 
-> Full stack engineer, DevRel, and tech content creator based in Athens. Building products and teaching people to build with AI.
+> Full stack engineer, DevRel Lead, public speaker, and tech content creator based in Athens. Building products, speaking about AI agents in production, and teaching people to build with AI.
 
-Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-old engineer and content creator. She is a Software Engineer and DevRel at NOFire AI, a UGC Creator at Lovable, and an Informatics student at NKUA (Top 1%). Her main Instagram (@artemis.codes) has 300k+ monthly views and 6.7k followers, growing rapidly.
+Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-old engineer, public speaker, and content creator. She is a Software Engineer and DevRel Lead at NOFire AI, a UGC Creator at Lovable, and an Informatics student at NKUA (Top 1%). Her main Instagram (@artemis.codes) has 300k+ monthly views and 6.7k followers, growing rapidly.
 
 ## What she does
 
 - **Builds**: Full stack web applications, AI-integrated products, mobile apps (Python/Django, Next.js, React Native)
+- **Speaks**: Conference talks and workshops on AI agents in production, AI-assisted development, and Gen Z builder culture
 - **Creates**: Short-form tech content on TikTok and Instagram covering AI tools, vibe coding, and practical AI builder tutorials
-- **DevRel**: Site Reliability Engineering and Developer Relations at NOFire AI
+- **DevRel**: Developer Relations Lead at NOFire AI, building the Context and Control Model for production
 
 ## Creator profile
 
@@ -22,18 +23,31 @@ Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-o
 
 ## Developer profile
 
-- Current role: Software Engineering and DevRel at NOFire AI (May 2026 - present)
+- Current role: Software Engineer and DevRel Lead at NOFire AI (May 2026 - present), the Context and Control Model for production
 - Also: UGC Creator at Lovable (Jun 2026 - present, contract)
 - Previously: AI Product Developer / Founding Engineer at KanoParty (Jul 2025 - May 2026)
 - Education: Informatics, NKUA (National and Kapodistrian University of Athens), Top 1%
 - Credentials: 10+ hackathons, several first-place finishes
 - Stack: Python, Django, Next.js, React Native, PostgreSQL, Tailwind, Supabase
 
+## Public speaking
+
+Available for conference talks and workshops. Topics: AI agents and production safety, what breaks when AI writes your code, guardrails for autonomous systems (blast radius, reversibility, policy before execution), vibe coding to production engineering, and building as a Gen Z engineer.
+
+Confirmed speaking engagements:
+
+- **DevConf.US 2026** (Sep 2026) — "The End of the Junior Developer: How Gen Z Builders Are Redefining Engineering Culture" (talk)
+- **Open Conf 2026** (Nov 2026) — "Zero to MVP: Build & Deploy an Airbnb Clone with AI in 60 Minutes" (hands-on workshop)
+- **React Summit 2026** — "University is My Side Hustle: How Gen Z Builders Ship to Production" (talk)
+- **TechBiz 2026** (Mar 2026) — "Vibecoding: The End of Traditional Engineering & How to Build in the Age of AI" (talk)
+
+Actively submitting to additional AI and software engineering conferences internationally. For speaking inquiries, use the contact email below.
+
 ## Available for
 
-- UGC campaigns for AI tools, developer tools, SaaS products, and tech products (primary interest)
+- Speaking at conferences and events on AI agents in production, AI-assisted development, and Gen Z builder culture (primary interest)
+- UGC campaigns for AI tools, developer tools, SaaS products, and tech products
 - Sponsored content and brand integrations
-- Speaking at hackathons, tech events, and student conferences
 - Freelance full stack development
 
 ## Contact
