@@ -1,15 +1,15 @@
 # Artemis Leonardou
 
-> Full stack engineer, DevRel Lead, public speaker, and tech content creator based in Athens. Building products, speaking about AI agents in production, and teaching people to build with AI.
+> Full stack engineer, DevRel, public speaker, and tech content creator based in Athens. Building products, speaking about AI agents in production, and teaching people to build with AI.
 
-Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-old engineer, public speaker, and content creator. She is a Software Engineer and DevRel Lead at NOFire AI, a UGC Creator at Lovable, and an Informatics student at NKUA (Top 1%). Her main Instagram (@artemis.codes) has 300k+ monthly views and 6.7k followers, growing rapidly.
+Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-old engineer, public speaker, and content creator. She is a Software Engineer and DevRel at NOFire AI, a UGC Creator at Lovable, and an Informatics student at NKUA (Top 1%). Her main Instagram (@artemis.codes) has 300k+ monthly views and 6.7k followers, growing rapidly.
 
 ## What she does
 
 - **Builds**: Full stack web applications, AI-integrated products, mobile apps (Python/Django, Next.js, React Native)
 - **Speaks**: Conference talks and workshops on AI agents in production, AI-assisted development, and Gen Z builder culture
 - **Creates**: Short-form tech content on TikTok and Instagram covering AI tools, vibe coding, and practical AI builder tutorials
-- **DevRel**: Developer Relations Lead at NOFire AI, building the Context and Control Model for production
+- **DevRel**: Developer Relations at NOFire AI, building the Context and Control Model for production
 
 ## Creator profile
 
@@ -23,7 +23,7 @@ Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-o
 
 ## Developer profile
 
-- Current role: Software Engineer and DevRel Lead at NOFire AI (May 2026 - present), the Context and Control Model for production
+- Current role: Software Engineer and DevRel at NOFire AI (May 2026 - present), the Context and Control Model for production
 - Also: UGC Creator at Lovable (Jun 2026 - present, contract)
 - Previously: AI Product Developer / Founding Engineer at KanoParty (Jul 2025 - May 2026)
 - Education: Informatics, NKUA (National and Kapodistrian University of Athens), Top 1%
