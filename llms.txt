@@ -1,0 +1,51 @@
+# Artemis Leonardou
+
+> Full stack engineer, DevRel, and tech content creator based in Athens. Building products and teaching people to build with AI.
+
+Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-old engineer and content creator. She is a Software Engineer and DevRel at NOFire AI, a UGC Creator at Lovable, and an Informatics student at NKUA (Top 1%). Her main Instagram (@artemis.codes) has 300k+ monthly views and 6.7k followers, growing rapidly.
+
+## What she does
+
+- **Builds**: Full stack web applications, AI-integrated products, mobile apps (Python/Django, Next.js, React Native)
+- **Creates**: Short-form tech content on TikTok and Instagram covering AI tools, vibe coding, and practical AI builder tutorials
+- **DevRel**: Site Reliability Engineering and Developer Relations at NOFire AI
+
+## Creator profile
+
+- Instagram: @artemis.codes (main account, 300k+ monthly views, 6.7k followers)
+- TikTok: @artemisvibecodes
+- YouTube: @artemiscodes
+- Audience: Tier-1 (US, EU, AU, CA) tech and builder audience
+- Content style: fast-paced, educational, practical — shows real builds with real prompts
+- Active UGC partner: Lovable (AI app builder)
+- Past brand experience: NOFire AI, Intel (Student Ambassador)
+
+## Developer profile
+
+- Current role: Software Engineering and DevRel at NOFire AI (May 2026 - present)
+- Also: UGC Creator at Lovable (Jun 2026 - present, contract)
+- Previously: AI Product Developer / Founding Engineer at KanoParty (Jul 2025 - May 2026)
+- Education: Informatics, NKUA (National and Kapodistrian University of Athens), Top 1%
+- Credentials: 10+ hackathons, several first-place finishes
+- Stack: Python, Django, Next.js, React Native, PostgreSQL, Tailwind, Supabase
+
+## Available for
+
+- UGC campaigns for AI tools, developer tools, SaaS products, and tech products (primary interest)
+- Sponsored content and brand integrations
+- Speaking at hackathons, tech events, and student conferences
+- Freelance full stack development
+
+## Contact
+
+Email: artemis.leona@gmail.com
+
+## Links
+
+- Website: https://artemiscodes.com
+- Dev portfolio: https://artemiscodes.com/portfolio
+- Instagram: https://www.instagram.com/artemis.codes/
+- TikTok: https://www.tiktok.com/@artemisvibecodes
+- YouTube: https://www.youtube.com/@artemiscodes
+- GitHub: https://github.com/artemisln
+- LinkedIn: https://www.linkedin.com/in/artemisln/
