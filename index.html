@@ -141,43 +141,6 @@
             margin-top: 10px;
         }
 
-        .talks-more {
-            margin-top: 18px;
-            border-top: 1px solid rgba(30, 41, 59, 0.9);
-            padding-top: 6px;
-        }
-        .talks-more > summary {
-            cursor: pointer;
-            list-style: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 0;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            color: #94a3b8;
-            transition: color 0.2s ease;
-        }
-        .talks-more > summary::-webkit-details-marker {
-            display: none;
-        }
-        .talks-more > summary::marker {
-            content: "";
-        }
-        .talks-more > summary:hover {
-            color: #2dd4bf;
-        }
-        .talks-more > summary svg {
-            flex-shrink: 0;
-            transition: transform 0.2s ease;
-        }
-        .talks-more[open] > summary svg {
-            transform: rotate(90deg);
-        }
-        .talks-more .talks-label {
-            margin-top: 14px;
-        }
     </style>
 </head>
 <body>
@@ -296,73 +259,10 @@
                                 </div>
                             </div>
 
-                            <details class="talks-more">
-                                <summary><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg><span>All dates and past talks</span></summary>
-
-                                <div class="talks-label">Also coming up</div>
-                                <div class="work-grid">
-                                    <div class="work-item">
-                                        <span class="work-date">Oct 2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://prow.ro/" target="_blank" rel="noopener">PROW 2026</a></div>
-                                            <div class="work-desc">Talk. Timisoara, Romania, October 30.</div>
-                                        </div>
-                                    </div>
-                                    <div class="work-item">
-                                        <span class="work-date">Nov 2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://gitnation.com/events/jsnation-us-2026" target="_blank" rel="noopener">What I Actually Test Before AI-Written Code Ships to Production</a></div>
-                                            <div class="work-desc">Talk at JSNation US, Greater New York, November 16 and 19.</div>
-                                        </div>
-                                    </div>
-                                    <div class="work-item">
-                                        <span class="work-date">Nov 2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://open-conf.gr/" target="_blank" rel="noopener">Zero to MVP: Build &amp; Deploy an Airbnb Clone with AI in 60 Minutes</a></div>
-                                            <div class="work-desc">Hands-on workshop at Open Conf, Athens, November 20 to 21.</div>
-                                        </div>
-                                    </div>
-                                    <div class="work-item">
-                                        <span class="work-date">Nov 2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://xtremeai.dev/2026/about/" target="_blank" rel="noopener">XtremeAI 2026</a></div>
-                                            <div class="work-desc">Talk. Online, November 24.</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="talks-label">Past</div>
-                                <div class="work-grid">
-                                    <div class="work-item">
-                                        <span class="work-date">Jun 2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://gitnation.com/events/react-summit-2026" target="_blank" rel="noopener">University is My Side Hustle: How Gen Z Builders Ship to Production</a></div>
-                                            <div class="work-desc">Talk at React Summit 2026, Amsterdam.</div>
-                                        </div>
-                                    </div>
-                                    <div class="work-item">
-                                        <span class="work-date">Mar 2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://www.dept.aueb.gr/en/node/34702" target="_blank" rel="noopener">Vibecoding: The End of Traditional Engineering &amp; How to Build in the Age of AI</a></div>
-                                            <div class="work-desc">Talk at TechBiz 2026, OTEAcademy, Athens.</div>
-                                        </div>
-                                    </div>
-                                    <div class="work-item">
-                                        <span class="work-date">Mar 2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://luma.com/7p55ngp0" target="_blank" rel="noopener">Cursor Meetup Athens</a></div>
-                                            <div class="work-desc">Community talk on building with AI coding agents. Athens.</div>
-                                        </div>
-                                    </div>
-                                    <div class="work-item">
-                                        <span class="work-date">2026</span>
-                                        <div>
-                                            <div class="work-title"><a href="https://uniai.gr/events/" target="_blank" rel="noopener">UniAI Student Demo Day</a></div>
-                                            <div class="work-desc">Demo and talk for the UniAI student AI community. Athens.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </details>
+                            <a href="/talks" class="portfolio-cta" style="margin-top:20px">
+                                All talks, past and upcoming
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
 
                             <p style="margin-top:24px">Topics I speak on: AI agents and production safety, what breaks when AI writes your code, guardrails for autonomous systems (blast radius, reversibility, policy before execution), vibe coding to production engineering, and building as a Gen Z engineer.</p>
 

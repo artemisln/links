@@ -32,6 +32,8 @@ Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-o
 
 ## Public speaking
 
+Full speaking page, with upcoming dates, past talks, topics and speaker kit: https://artemiscodes.com/talks/
+
 Available for conference talks and workshops. Topics: AI agents and production safety, what breaks when AI writes your code, guardrails for autonomous systems (blast radius, reversibility, policy before execution), vibe coding to production engineering, and building as a Gen Z engineer.
 
 Upcoming speaking engagements:
@@ -67,6 +69,7 @@ Email: artemis.leona@gmail.com
 ## Links
 
 - Website: https://artemiscodes.com
+- Talks and speaking: https://artemiscodes.com/talks
 - Dev portfolio: https://artemiscodes.com/portfolio
 - Instagram: https://www.instagram.com/artemis.codes/
 - TikTok: https://www.tiktok.com/@artemisvibecodes
