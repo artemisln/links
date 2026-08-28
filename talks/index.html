@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ7Y5JWZRQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HJ7Y5JWZRQ');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis Codes - Talks</title>
+    <meta name="description" content="Conference talks and workshops by Artemis Leonardou on AI agents in production, what breaks when AI writes your code, and building as a Gen Z engineer. Upcoming dates, past talks, and speaker kit." />
+    <link rel="canonical" href="https://artemiscodes.com/talks/" />
+    <link rel="icon" href="../img/favicon.svg" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <style>
+        .sticky-contact {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            padding: 10px 18px;
+            background: rgba(45, 212, 191, 0.08);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            border-radius: 999px;
+            color: #2dd4bf;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            backdrop-filter: blur(8px);
+            transition: all 0.2s ease;
+        }
+        .sticky-contact:hover {
+            background: rgba(45, 212, 191, 0.18);
+            border-color: rgba(45, 212, 191, 0.55);
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #64748b;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: color 0.2s ease;
+        }
+        .back-home:hover { color: #2dd4bf; }
+
+        .work-grid {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .work-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+        .work-item:hover {
+            background: rgba(30, 41, 59, 0.5);
+        }
+        .work-date {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #475569;
+            min-width: 80px;
+            padding-top: 2px;
+            flex-shrink: 0;
+        }
+        .work-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #e2e8f0;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+        .work-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .work-title a:hover { color: #2dd4bf; }
+        .work-desc {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .kit-bio {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-left: 3px solid rgba(45, 212, 191, 0.6);
+            border-radius: 8px;
+            background: rgba(45, 212, 191, 0.04);
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+        .kit-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+            display: grid;
+            gap: 10px;
+        }
+        .kit-list li {
+            display: flex;
+            gap: 12px;
+            font-size: 14px;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        .kit-key {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #475569;
+            min-width: 80px;
+            padding-top: 3px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spotlight"></div>
+
+        <div class="main-content">
+            <div class="layout">
+                <header class="sidebar">
+                    <div class="header-content">
+                        <a href="/" class="back-home">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                            Home
+                        </a>
+                        <h1 class="name">Artemis Leonardou</h1>
+                        <div class="aka">aka Artemis Codes ;)</div>
+                        <h2 class="title">Public Speaker · Software Engineer &amp; DevRel @ NOFire AI</h2>
+                        <p class="bio">I speak at conferences about AI agents in production, what breaks when AI writes your code, and building as a Gen Z engineer. Talks and hands-on workshops, in person and online.</p>
+
+                        <nav class="nav" aria-label="In-page jump links">
+                            <ul>
+                                <li>
+                                    <a href="#upcoming" class="nav-link active">
+                                        <span class="nav-indicator"></span>
+                                        <span class="nav-text">Upcoming</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#past" class="nav-link">
+                                        <span class="nav-indicator"></span>
+                                        <span class="nav-text">Past talks</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#topics" class="nav-link">
+                                        <span class="nav-indicator"></span>
+                                        <span class="nav-text">Topics</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#kit" class="nav-link">
+                                        <span class="nav-indicator"></span>
+                                        <span class="nav-text">Speaker kit</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <ul class="social-links" aria-label="Social media">
+                        <li>
+                            <a href="https://www.github.com/artemisln" aria-label="GitHub">
+                                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/artemisln/" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/artemis.codes/" aria-label="Instagram">
+                                <svg viewBox="0 0 1000 1000" fill="currentColor"><path d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.12-75.22-10.22-92.86-17-23.36-9-40-19.88-57.58-37.29s-28.38-34.11-37.5-57.42c-6.85-17.64-15.1-44.08-17.38-92.83-2.48-52.69-3-68.51-3.29-202s.22-149.29,2.53-202c2.08-48.71,10.23-75.21,17-92.84,9-23.39,19.84-40,37.29-57.57s34.1-28.39,57.43-37.51c17.62-6.88,44.06-15.06,92.79-17.38,52.73-2.5,68.53-3,202-3.29s149.31.21,202.06,2.53c48.71,2.12,75.22,10.19,92.83,17,23.37,9,40,19.81,57.57,37.29s28.4,34.07,37.52,57.45c6.89,17.57,15.07,44,17.37,92.76,2.51,52.73,3.08,68.54,3.32,202s-.23,149.31-2.54,202c-2.13,48.75-10.21,75.23-17,92.89-9,23.35-19.85,40-37.31,57.56s-34.09,28.38-57.43,37.5c-17.6,6.87-44.07,15.07-92.76,17.39-52.73,2.48-68.53,3-202.05,3.29s-149.27-.25-202-2.53m407.6-674.61a60,60,0,1,0,59.88-60.1,60,60,0,0,0-59.88,60.1M245.77,503c.28,141.8,115.44,256.49,257.21,256.22S759.52,643.8,759.25,502,643.79,245.48,502,245.76,245.5,361.22,245.77,503m90.06-.18a166.67,166.67,0,1,1,167,166.34,166.65,166.65,0,0,1-167-166.34"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@artemisvibecodes" aria-label="TikTok">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.16 8.16 0 004.77 1.52V6.79a4.85 4.85 0 01-1-.1z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@artemiscodes" aria-label="YouTube">
+                                <svg viewBox="0 0 461.001 461.001" fill="currentColor"><path d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+
+                <main id="content" class="content">
+                    <section id="upcoming" class="section">
+                        <div class="section-header">
+                            <h2>Upcoming</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>Where I am speaking next. Titles are linked to the event page.</p>
+                            <div class="work-grid">
+                            <div class="work-item">
+                                <span class="work-date">Sep 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://www.conf42.com/obs2026" target="_blank" rel="noopener">Conf42 Observability 2026</a></div>
+                                    <div class="work-desc">Talk. Online, September 10.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Sep 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://www.devconf.info/us/" target="_blank" rel="noopener">The End of the Junior Developer: How Gen Z Builders Are Redefining Engineering Culture</a></div>
+                                    <div class="work-desc">Talk at DevConf.US, Boston University, September 24 to 25.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Oct 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://sreday.com/" target="_blank" rel="noopener">SREday San Francisco</a></div>
+                                    <div class="work-desc">Talk. San Francisco, California.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Oct 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://prow.ro/" target="_blank" rel="noopener">PROW 2026</a></div>
+                                    <div class="work-desc">Talk. Timisoara, Romania, October 30.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Nov 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://gitnation.com/events/jsnation-us-2026" target="_blank" rel="noopener">What I Actually Test Before AI-Written Code Ships to Production</a></div>
+                                    <div class="work-desc">Talk at JSNation US, Greater New York, November 16 and 19.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Nov 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://open-conf.gr/" target="_blank" rel="noopener">Zero to MVP: Build &amp; Deploy an Airbnb Clone with AI in 60 Minutes</a></div>
+                                    <div class="work-desc">Hands-on workshop at Open Conf, Athens, November 20 to 21.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Nov 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://xtremeai.dev/2026/about/" target="_blank" rel="noopener">XtremeAI 2026</a></div>
+                                    <div class="work-desc">Talk. Online, November 24.</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="past" class="section">
+                        <div class="section-header">
+                            <h2>Past talks</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>Conferences and meetups I have already spoken at.</p>
+                            <div class="work-grid">
+                            <div class="work-item">
+                                <span class="work-date">Jun 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://gitnation.com/events/react-summit-2026" target="_blank" rel="noopener">University is My Side Hustle: How Gen Z Builders Ship to Production</a></div>
+                                    <div class="work-desc">Talk at React Summit 2026, Amsterdam.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Mar 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://www.dept.aueb.gr/en/node/34702" target="_blank" rel="noopener">Vibecoding: The End of Traditional Engineering &amp; How to Build in the Age of AI</a></div>
+                                    <div class="work-desc">Talk at TechBiz 2026, OTEAcademy, Athens.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">Mar 2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://luma.com/7p55ngp0" target="_blank" rel="noopener">Cursor Meetup Athens</a></div>
+                                    <div class="work-desc">Community talk on building with AI coding agents. Athens.</div>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <span class="work-date">2026</span>
+                                <div>
+                                    <div class="work-title"><a href="https://uniai.gr/events/" target="_blank" rel="noopener">UniAI Student Demo Day</a></div>
+                                    <div class="work-desc">Demo and talk for the UniAI student AI community. Athens.</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="topics" class="section">
+                        <div class="section-header">
+                            <h2>Topics</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>What I pitch, and what I am happy to tailor for your audience.</p>
+
+                            <div class="resources-grid">
+                                <div class="resource-card">
+                                    <h3>AI agents in production</h3>
+                                    <p>Production safety for autonomous systems, and the guardrails that make them survivable: blast radius, reversibility, and policy before execution. Drawn from building the Context and Control Model at NOFire AI.</p>
+                                </div>
+                                <div class="resource-card">
+                                    <h3>What breaks when AI writes your code</h3>
+                                    <p>The failure modes I actually hit shipping AI-assisted code, and what I check before any of it reaches production. Review habits, test coverage that earns its keep, and where the model reliably lets you down.</p>
+                                </div>
+                                <div class="resource-card">
+                                    <h3>The Gen Z builder path</h3>
+                                    <p>Vibe coding to production engineering: how the next generation learns to build, why the traditional path is inverting, and what that means for engineering culture and for hiring juniors.</p>
+                                </div>
+                            </div>
+
+                            <p style="margin-top:24px">Formats: conference talk, lightning talk, hands-on workshop, or panel. In person or remote.</p>
+                        </div>
+                    </section>
+
+                    <section id="kit" class="section">
+                        <div class="section-header">
+                            <h2>Speaker kit</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>Everything you need to announce a session. Copy it straight from here.</p>
+
+                            <div class="kit-bio">
+                                Artemis Leonardou is a Software Engineer and DevRel at NOFire AI, the Context and Control Model for production, and an Informatics student at NKUA. She has been shipping products since she was 14, has competed in 10+ hackathons with several first-place finishes, and reaches 300k+ monthly views teaching people to build with AI as @artemis.codes.
+                            </div>
+
+                            <ul class="kit-list">
+                                <li><span class="kit-key">Name</span><span>Artemis Leonardou</span></li>
+                                <li><span class="kit-key">Role</span><span>Software Engineer &amp; DevRel at <a href="https://nofire.ai" class="link">NOFire AI</a></span></li>
+                                <li><span class="kit-key">Based in</span><span>Athens, Greece. Available to travel.</span></li>
+                                <li><span class="kit-key">Headshot</span><span><a href="../images/pfp.jpg" class="link" target="_blank" rel="noopener">Download</a></span></li>
+                                <li><span class="kit-key">Social</span><span><a href="https://www.instagram.com/artemis.codes/" class="link">@artemis.codes</a> on Instagram, <a href="https://www.linkedin.com/in/artemisln/" class="link">artemisln</a> on LinkedIn</span></li>
+                                <li><span class="kit-key">Contact</span><span><a href="mailto:artemis.leona@gmail.com" class="link">artemis.leona@gmail.com</a></span></li>
+                            </ul>
+
+                            <a href="mailto:artemis.leona@gmail.com" class="portfolio-cta" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:14px;font-weight:600;color:#e2e8f0;text-decoration:none">
+                                Invite me to speak
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <a href="mailto:artemis.leona@gmail.com" class="sticky-contact" aria-label="Contact Artemis">Contact me</a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -32,14 +32,26 @@ Artemis Leonardou (known online as Artemis Codes, @artemis.codes) is a 19-year-o
 
 ## Public speaking
 
+Full speaking page, with upcoming dates, past talks, topics and speaker kit: https://artemiscodes.com/talks/
+
 Available for conference talks and workshops. Topics: AI agents and production safety, what breaks when AI writes your code, guardrails for autonomous systems (blast radius, reversibility, policy before execution), vibe coding to production engineering, and building as a Gen Z engineer.
 
-Confirmed speaking engagements:
+Upcoming speaking engagements:
 
-- **DevConf.US 2026** (Sep 2026) — "The End of the Junior Developer: How Gen Z Builders Are Redefining Engineering Culture" (talk)
-- **Open Conf 2026** (Nov 2026) — "Zero to MVP: Build & Deploy an Airbnb Clone with AI in 60 Minutes" (hands-on workshop)
-- **React Summit 2026** — "University is My Side Hustle: How Gen Z Builders Ship to Production" (talk)
-- **TechBiz 2026** (Mar 2026) — "Vibecoding: The End of Traditional Engineering & How to Build in the Age of AI" (talk)
+- **Conf42 Observability 2026** (Sep 10, 2026, online): talk. https://www.conf42.com/obs2026
+- **DevConf.US 2026** (Sep 24-25, 2026, Boston University): "The End of the Junior Developer: How Gen Z Builders Are Redefining Engineering Culture" (talk). https://www.devconf.info/us/
+- **SREday San Francisco** (Oct 2026, San Francisco, CA): talk. https://sreday.com/
+- **PROW 2026** (Oct 30, 2026, Timisoara, Romania): talk. https://prow.ro/
+- **JSNation US 2026** (Nov 16 and 19, 2026, Greater New York): "What I Actually Test Before AI-Written Code Ships to Production" (talk). https://gitnation.com/events/jsnation-us-2026
+- **Open Conf 2026** (Nov 20-21, 2026, Athens): "Zero to MVP: Build & Deploy an Airbnb Clone with AI in 60 Minutes" (hands-on workshop). https://open-conf.gr/
+- **XtremeAI 2026** (Nov 24, 2026, online): talk. https://xtremeai.dev/2026/about/
+
+Past speaking engagements:
+
+- **React Summit 2026** (Jun 2026, Amsterdam): "University is My Side Hustle: How Gen Z Builders Ship to Production" (talk). https://gitnation.com/events/react-summit-2026
+- **TechBiz 2026** (Mar 2026, OTEAcademy, Athens): "Vibecoding: The End of Traditional Engineering & How to Build in the Age of AI" (talk). https://www.dept.aueb.gr/en/node/34702
+- **Cursor Meetup Athens** (Mar 2026, Athens): community talk on building with AI coding agents. https://luma.com/7p55ngp0
+- **UniAI Student Demo Day** (2026, Athens): demo and talk for the UniAI student AI community. https://uniai.gr/events/
 
 Actively submitting to additional AI and software engineering conferences internationally. For speaking inquiries, use the contact email below.
 
@@ -57,6 +69,7 @@ Email: artemis.leona@gmail.com
 ## Links
 
 - Website: https://artemiscodes.com
+- Talks and speaking: https://artemiscodes.com/talks
 - Dev portfolio: https://artemiscodes.com/portfolio
 - Instagram: https://www.instagram.com/artemis.codes/
 - TikTok: https://www.tiktok.com/@artemisvibecodes
