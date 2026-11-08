@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ7Y5JWZRQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HJ7Y5JWZRQ');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start here | Artemis Codes</title>
+    <meta name="description" content="Οι απαντήσεις μου στα πιο συχνά DMs: κώδικας από το μηδέν, Πανελλήνιες, hackathons, ευκαιρίες για φοιτητές, laptop κ εργαλεία." />
+    <meta property="og:title" content="Αυτά με ρωτάτε πιο συχνά" />
+    <meta property="og:description" content="Κώδικας από το μηδέν, Πανελλήνιες, hackathons, ευκαιρίες για φοιτητές." />
+    <meta property="og:url" content="https://artemiscodes.com/start/" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://artemiscodes.com/start/" />
+    <link rel="icon" href="../img/favicon.svg" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <style>
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+        .main-content { padding-top: 24px; }
+        .start {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 0 64px;
+        }
+        .start a { color: #2dd4bf; text-underline-offset: 3px; }
+        .start a:hover { color: #5eead4; }
+
+        .start h1 {
+            font-size: clamp(2rem, 7vw, 2.75rem);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-bottom: 20px;
+        }
+        .intro { font-size: 17px; margin-bottom: 32px; }
+
+        .jump {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .jump a {
+            display: block;
+            padding: 8px 14px;
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            border-radius: 999px;
+            background: rgba(45, 212, 191, 0.08);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .jump a:hover {
+            background: rgba(45, 212, 191, 0.18);
+            border-color: rgba(45, 212, 191, 0.55);
+        }
+
+        .topic { padding-top: 40px; }
+        .topic h2 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #94a3b8;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .qa {
+            padding: 24px 0;
+            border-bottom: 1px solid #1e293b;
+            scroll-margin-top: 16px;
+        }
+        .qa:target h3 { color: #2dd4bf; }
+        .qa h3 {
+            font-size: 18px;
+            line-height: 1.35;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 10px;
+        }
+        .qa h3 a {
+            margin-left: 6px;
+            color: #475569;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .qa h3 a:hover { color: #2dd4bf; }
+        .qa p + p { margin-top: 10px; }
+
+        .closing { padding-top: 40px; font-size: 17px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spotlight"></div>
+
+        <div class="main-content">
+            <main class="start">
+                <h1>Αυτά με ρωτάτε πιο συχνά</h1>
+
+                <p class="intro">Ξεκίνησα να γράφω κώδικα στα 14, στην καραντίνα του 2020. Έκανα πολλά hackathons, έγραψα 19k στις Πανελλήνιες χωρίς φροντιστήριο κ ανέβασα βίντεο γι' αυτό. Από τα βίντεο βρήκα την πρώτη μου δουλειά, πρώτη πρόσληψη στην KanoParty. Εδώ μάζεψα όσα απαντάω συνέχεια στα DMs.</p>
+
+                <nav aria-label="Θέματα">
+                    <ul class="jump">
+                        <li><a href="#kodikas">Κώδικας</a></li>
+                        <li><a href="#sxoleio">Πανελλήνιες κ διάβασμα</a></li>
+                        <li><a href="#douleia">Πληροφορική κ δουλειά</a></li>
+                        <li><a href="#hackathons">Hackathons</a></li>
+                        <li><a href="#efkairies">Ευκαιρίες</a></li>
+                    </ul>
+                </nav>
+
+                <section class="topic" id="kodikas">
+                    <h2>Κώδικας</h2>
+
+                    <article class="qa" id="apo-to-miden">
+                        <h3>Από πού να ξεκινήσω από το μηδέν;<a href="#apo-to-miden" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Εγώ ξεκίνησα με ένα Udemy course, από το <a href="https://zerotomastery.io/" target="_blank" rel="noopener noreferrer">Zero to Mastery</a> για web development, κ μετά έκανα πάρα πολλά personal projects μόνη μου. Τα hackathons έδιναν έναν έξτρα λόγο να φτιάξω κάτι.</p>
+                        <p>Αν θες κάτι πιο οργανωμένο, δες το <a href="https://l.devready.gr/s/artemis" data-link="devready" target="_blank" rel="noopener noreferrer">DevReady</a> (affiliate link).</p>
+                    </article>
+
+                    <article class="qa" id="tutorials">
+                        <h3>Βλέπω tutorials κ δεν μου μένει τίποτα<a href="#tutorials" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Καταλαβαίνω το struggle, είναι δύσκολο με τα tutorials ειδικά τώρα που ξέρεις ότι το AI μπορεί να σου κάνει όλη τη δουλειά. Ο καλύτερος τρόπος να μάθεις μια γλώσσα σε βάθος είναι να φτιάξεις ένα δικό σου project από την αρχή, πχ ένα μικρό CRUD app με βάση δεδομένων. Απλά όσο γίνεται χωρίς AI :)</p>
+                    </article>
+
+                    <article class="qa" id="allagi-karieras">
+                        <h3>Αλλάζω καριέρα κ ξέρω τα βασικά. Τι κάνω;<a href="#allagi-karieras" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Θα πρότεινα να διαλέξεις ένα stack κ να μείνεις σε αυτό, πχ Python με FastAPI κ PostgreSQL. Μετά φτιάξε ένα δικό σου project από την αρχή: ένα API με login, βάση δεδομένων κ deploy κάπου που να το ανοίγει όποιος θέλει. Όσο γίνεται χωρίς AI στην αρχή.</p>
+                    </article>
+
+                    <article class="qa" id="paidi-12">
+                        <h3>Το παιδί μου είναι 12. Πού να μάθει να χρησιμοποιεί AI;<a href="#paidi-12" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Δεν έχω κάποιο συγκεκριμένο μάθημα να προτείνω με σιγουριά. Στα 12 το καλύτερο ξεκίνημα είναι να παίξει το ίδιο με απλά AI εργαλεία υπό επίβλεψη, πχ να φτιάξει κάποιο παιχνίδι ή εφαρμογή με έναν AI builder όπως το <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer">Lovable</a> ή το <a href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</a>.</p>
+                    </article>
+
+                    <article class="qa" id="laptop">
+                        <h3>Ποιο laptop να πάρω για προγραμματισμό;<a href="#laptop" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Κοίτα κυρίως 16GB RAM κ SSD τουλάχιστον 512GB. Αν χωράει στο budget, ένα MacBook Pro με M chip είναι πολύ καλή επιλογή, αλλιώς οποιοδήποτε laptop με αυτά τα specs κάνει τη δουλειά (κ φρόντισε να βάλεις Linux). Με 24 ή 32GB even better ;)</p>
+                    </article>
+
+                    <article class="qa" id="montaz">
+                        <h3>Με τι κάνεις το αυτόματο μοντάζ στα reels;<a href="#montaz" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Με Claude Code κ ένα skill που έφτιαξα, για ελληνικούς υπότιτλους, κόψιμο κενών, zoom κ SFX. Είναι ανοιχτό: <a href="https://github.com/artemisln/edit-reel" target="_blank" rel="noopener noreferrer">github.com/artemisln/edit-reel</a></p>
+                    </article>
+                </section>
+
+                <section class="topic" id="sxoleio">
+                    <h2>Πανελλήνιες κ διάβασμα</h2>
+
+                    <article class="qa" id="ksana-panellinies">
+                        <h3>Αξίζει να ξαναδώσω Πανελλήνιες;<a href="#ksana-panellinies" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Εξαρτάται από το τι θέλεις να κάνεις μετά. Αν το επάγγελμα που σε ενδιαφέρει απαιτεί συγκεκριμένο πτυχίο, αξίζει να ξαναδώσεις. Αν όχι, υπάρχουν κ άλλοι δρόμοι, όπως τα ΣΑΕΚ ή το Ανοικτό Πανεπιστήμιο αργότερα.</p>
+                        <p>Για πληροφορική θα πρότεινα να μην χάσεις άλλη μια χρονιά για όνομα σχολής. Μπες σε όποια μπορείς τώρα κ ξεκίνα να χτίζεις πράγματα από την αρχή, αυτό μετράει πολύ περισσότερο από ΑΠΘ/ΕΚΠΑ στο cv σου. Πολλοί είναι κ senior developers χωρίς πτυχίο.</p>
+                        <p>Ό,τι κ να αποφασίσεις, καλή τύχη κ καλή αρχή :)</p>
+                    </article>
+
+                    <article class="qa" id="frontistirio">
+                        <h3>Πώς διαβάζω χωρίς φροντιστήριο;<a href="#frontistirio" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Μην αφήσεις κενά στην ύλη, ειδικά στα μαθήματα που δυσκολεύεσαι πιο πολύ. Προχώρα συστηματικά κ κάνε πολλές επαναλήψεις ασκήσεων, όχι μόνο θεωρία.</p>
+                        <p>Τα flashcards μου για οικονομικά, πληροφορική κ μαθηματικά είναι <a href="/links/">εδώ</a>.</p>
+                    </article>
+
+                    <article class="qa" id="ypnos">
+                        <h3>Να κοιμάμαι 5 ώρες για να προλάβω;<a href="#ypnos" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Θα πρότεινα να μη θυσιάσεις τον ύπνο. Κοιμήσου 7 με 8 ώρες κ κόψε από αλλού, πχ μην χρησιμοποιείς κινητό όσο διαβάζεις. Στα διαγωνίσματα δούλεψε πρώτα τα κεφάλαια που πέφτουν πιο συχνά. Το «είμαι πίσω» το νιώθουν σχεδόν όλοι αυτή την εποχή.</p>
+                    </article>
+
+                    <article class="qa" id="agglika">
+                        <h3>Πώς μαθαίνω Αγγλικά χωρίς φροντιστήριο;<a href="#agglika" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Το πιο πρακτικό είναι να βλέπεις καθημερινά περιεχόμενο στα αγγλικά που σε ενδιαφέρει, πχ σειρές ή YouTube με αγγλικούς υπότιτλους αντί για ελληνικούς. Για λεξιλόγιο δοκίμασε <a href="https://www.duolingo.com/" target="_blank" rel="noopener noreferrer">Duolingo</a> ή <a href="https://apps.ankiweb.net/" target="_blank" rel="noopener noreferrer">Anki</a>, κ για προφορική εξάσκηση δωρεάν apps όπως <a href="https://www.tandem.net/" target="_blank" rel="noopener noreferrer">Tandem</a> ή <a href="https://www.hellotalk.com/" target="_blank" rel="noopener noreferrer">HelloTalk</a>, όπου μιλάς με native speakers. Το'χεις κ καλή αρχή!</p>
+                    </article>
+
+                    <article class="qa" id="kinito">
+                        <h3>Καίω τη μέρα μου σε reels. Πώς το κόβω;<a href="#kinito" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Κλασικό. Βάλε time limit στην εφαρμογή κ κάνε το κινητό σου full βαρετό (υπάρχουν YouTube tutorials που το κάνουν σαν dumb phone). Το Instagram μπορείς να το σβήσεις από τις εφαρμογές κ να μπαίνεις από το browser που είναι λίγο χάλια, ή να πεις στους φίλους σου να μιλάτε σε Viber/WhatsApp.</p>
+                        <p>Έχε πάντα ένα μικρό coding project έτοιμο κ ανοιχτό για τη στιγμή που θες να σκρολάρεις. Δοκίμασε τις πρώτες 1-2 ώρες που ξυπνάς να μην ανοίγεις καθόλου social media.</p>
+                    </article>
+                </section>
+
+                <section class="topic" id="douleia">
+                    <h2>Πληροφορική κ δουλειά</h2>
+
+                    <article class="qa" id="aksizei-me-ai">
+                        <h3>Αξίζει ακόμα η πληροφορική με το AI;<a href="#aksizei-me-ai" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Θεωρώ ότι αξίζει, το AI αλλάζει το πώς γράφουμε κώδικα αλλά χρειάζονται ακόμα άτομα που καταλαβαίνουν τι φτιάχνουν. Απλά το πτυχίο μόνο του δεν αρκεί πια, θέλει projects κ πρακτική από νωρίς. Θα έκανα 10% μόνο αν με τραβούσε πραγματικά κάτι άλλο, όχι από φόβο για το AI.</p>
+                    </article>
+
+                    <article class="qa" id="remote">
+                        <h3>Πού ψάχνω remote δουλειά;<a href="#remote" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Στο LinkedIn Jobs με φίλτρο Remote, κ σε boards όπως <a href="https://weworkremotely.com/" target="_blank" rel="noopener noreferrer">We Work Remotely</a> κ <a href="https://remoteok.com/" target="_blank" rel="noopener noreferrer">Remote OK</a>. Πολλές ξένες εταιρείες με γραφείο στην Αθήνα δουλεύουν μόνο στα αγγλικά, οπότε ψάξε κ «Athens» στο LinkedIn.</p>
+                    </article>
+
+                    <article class="qa" id="ptyxiaki">
+                        <h3>Τι θέμα να διαλέξω για πτυχιακή;<a href="#ptyxiaki" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Εξαρτάται τι θες μετά. Αν σκέφτεσαι μεταπτυχιακό ή έρευνα, η δημοσίευση μετράει πολύ. Αν θες να δουλέψεις σε εταιρεία, κάτι που μπορείς να δείξεις είναι πιο χρήσιμο στο πορτφόλιο.</p>
+                        <p>Για πτυχιακή με AI agent, ένα καλό τεστ είναι αν τα βήματα δεν είναι γνωστά από πριν. Πχ ένας agent που παίρνει ένα GitHub issue, διαβάζει το repo, προσπαθεί να αναπαράγει το bug τρέχοντας τα tests κ προτείνει fix. Μπορείς να το αξιολογήσεις με νούμερα (πόσα issues έλυσε σωστά).</p>
+                    </article>
+                </section>
+
+                <section class="topic" id="hackathons">
+                    <h2>Hackathons</h2>
+
+                    <article class="qa" id="hackathon-empeiria">
+                        <h3>Χρειάζομαι εμπειρία για να πάω σε hackathon;<a href="#hackathon-empeiria" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Όχι, τα περισσότερα είναι ανοιχτά κ σε άτομα από business, κ ομάδα φτιάχνεις κ εκεί αν δεν έχεις. Φέρε μόνο το λάπτοπ σου. Για γλώσσα κ προϋποθέσεις τσέκαρε το σάιτ του κάθε διαγωνισμού.</p>
+                    </article>
+
+                    <article class="qa" id="hackathon-tips">
+                        <h3>Πώς φτιάχνω κάτι που ξεχωρίζει;<a href="#hackathon-tips" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Το πιο σημαντικό tip θεωρώ για διαγωνισμό: διάλεξε ένα πρόβλημα που μπορείς να δείξεις να δουλεύει live σε 2 λεπτά, κ χτίσε μόνο αυτό. Κράτα 3 με 4 ώρες στο τέλος για το demo κ το pitch.</p>
+                    </article>
+                </section>
+
+                <section class="topic" id="efkairies">
+                    <h2>Ευκαιρίες</h2>
+
+                    <article class="qa" id="ameriki">
+                        <h3>Ποιο είναι αυτό με την Αμερική από το βίντεο;<a href="#ameriki" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Είναι το <a href="https://jon.io/the-jon-vlachogiannis-fund" target="_blank" rel="noopener noreferrer">Jon Vlachogiannis Fund</a>. Αν σπουδάζεις ή κάνεις έρευνα στην Ελλάδα κ σου έχει γίνει δεκτό paper, poster ή workshop σε συνέδριο για AI, όπως το NeurIPS ή το ICML, σου πληρώνει το ταξίδι στην Αμερική για να το παρουσιάσεις (αεροπορικά, διαμονή κ 500$ τη μέρα). Προς το παρόν μόνο για συνέδρια στις ΗΠΑ.</p>
+                    </article>
+
+                    <article class="qa" id="cern">
+                        <h3>Η σελίδα του CERN λέει ότι δεν υπάρχει κάτι ανοιχτό<a href="#cern" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Απλά δεν έχει βγει ακόμα η πρόσκληση. Συνήθως ανοίγει τον χειμώνα κ κλείνει τέλος Ιανουαρίου. Τσέκαρε το <a href="https://careers.cern/programmes/summer-studentship" target="_blank" rel="noopener noreferrer">Summer Student Programme</a> μέσα στον Δεκέμβρη. Θέλει να έχεις τελειώσει 6 εξάμηνα μέχρι το καλοκαίρι.</p>
+                    </article>
+
+                    <article class="qa" id="yc">
+                        <h3>Πώς πήγες στο event του YC στο Σαν Φρανσίσκο;<a href="#yc" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Ήταν το AI Startup School του Y Combinator, δωρεάν event για φοιτητές κ νέους builders. Μπήκα στα 18 χωρίς δική μου startup. Κάνεις αίτηση με μια σύντομη φόρμα για το τι έχεις φτιάξει κ καλύπτουν 500$ για το ταξίδι. Τσέκαρε τη <a href="https://www.ycombinator.com/events" target="_blank" rel="noopener noreferrer">σελίδα events του YC</a> κ φτιάξε πράγματα που μπορείς να δείξεις.</p>
+                    </article>
+
+                    <article class="qa" id="san-francisco">
+                        <h3>Πάω Σαν Φρανσίσκο. Τι να κάνω εκεί;<a href="#san-francisco" aria-label="Σύνδεσμος σε αυτή την απάντηση">#</a></h3>
+                        <p>Θεωρώ το πιο σημαντικό είναι να πας σε όσο περισσότερα events μπορείς (πχ στο <a href="https://luma.com/sf" target="_blank" rel="noopener noreferrer">Luma</a> ή στο <a href="https://cerebralvalley.ai/events" target="_blank" rel="noopener noreferrer">Cerebral Valley</a> για AI) κ να μιλάς κατευθείαν με founders, όχι μόνο με recruiters. Έχε κ ένα project live που να ανοίγει από το κινητό για να το δείχνεις.</p>
+                    </article>
+                </section>
+
+                <p class="closing">Δεν το βρήκες εδώ; Στείλε μου στο <a href="https://www.instagram.com/artemis.codes/" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
